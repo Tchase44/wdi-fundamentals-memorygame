@@ -1,6 +1,24 @@
 
 
-var card = ["queen","queen","king","king"];
+var card = [
+  {
+  	rank:"queen",
+  	suit:"diamonds",
+  	cardImage: "images/queen-of-diamonds.png"
+  },{
+  	rank:"queen",
+  	suit:"hearts",
+  	cardImage: "images/queen-of-hearts.png"
+  },{
+  	rank:"king",
+  	suit:"hearts",
+  	cardImage: "images/king-of-hearts.png"
+  },{
+  	rank:"king",
+  	suit:"diamonds",
+  	cardImage: "images/king-of-diamonds.png"
+  }
+];
 var cardsInPlay = [];
 
 
@@ -17,9 +35,10 @@ var checkForMatch = function(){
 
 var flipCard = function(cardID) {
 	// 
-	console.log("user flipped "+ card[cardID]);
+	console.log("user flipped "+ card[cardID].rank);
     //
-	cardsInPlay.push(card[cardID]);
+	cardsInPlay.push(card[cardID].rank);
+	console.log(cardsInPlay);
     //
 	checkForMatch();
 };
